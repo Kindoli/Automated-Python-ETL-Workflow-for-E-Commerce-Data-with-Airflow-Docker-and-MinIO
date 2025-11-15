@@ -66,11 +66,16 @@ ecommerce_etl
 
 ##  Project Structure
 ├── dags/
+
 │   └── ecommerce_etl.py
+
 ├── data/
+
 │   └── ecommerce_raw.csv
 ├── output/
+
 ├── docker-compose.yml
+
 └── README.md
 
 ## 🧪 Technologies Used
