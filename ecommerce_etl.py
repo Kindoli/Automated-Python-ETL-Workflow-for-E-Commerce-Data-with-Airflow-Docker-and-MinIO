@@ -7,9 +7,9 @@ from botocore.client import Config
 import os
 
 # MinIO connection config
-MINIO_ENDPOINT = "minio:9000"
-MINIO_ACCESS_KEY = "minioadmin"
-MINIO_SECRET_KEY = "minioadmin"
+MINIO_ENDPOINT = "***"
+MINIO_ACCESS_KEY = "****"
+MINIO_SECRET_KEY = "*****"
 MINIO_BUCKET = "ecommerce-bucket"
 S3_KEY = "processed/ecommerce_cleaned.csv"
 
