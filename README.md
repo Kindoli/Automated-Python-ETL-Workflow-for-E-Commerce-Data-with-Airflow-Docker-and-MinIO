@@ -87,6 +87,16 @@ ecommerce_etl
 - MinIO (S3 API)
 
 - Docker & Docker Compose
+  
+  ## 🛡️ Best Practices Implemented
+
+✔ Environment variables for secrets (secret key, MinIO creds)
+✔ No hard-coded passwords in code
+✔ XCom used only for lightweight metadata
+✔ Large data passed via files instead of XCom
+✔ Modular project structure (dags / data / output)
+✔ Proper volume mounting for reproducibility
+✔ Idempotent DAG tasks (overwrite allowed)
 
 ## 🎯 Key Learning Outcomes
 
