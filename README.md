@@ -43,27 +43,6 @@ ecommerce-bucket/processed/ecommerce_cleaned.csv
 ![Ecommerce2](https://github.com/user-attachments/assets/f59bf364-6de2-4ac3-b5bd-3c45f0dfa861)
 
 
-## 🐳 Running the Pipeline (Docker Compose)
-
-1️⃣ Clone the repository
-git clone https://github.com/<your-username>/ecommerce-airflow-etl.git
-cd ecommerce-airflow-etl
-
-2️⃣ Start the stack
-docker compose up -d
-
-3️⃣ Access Airflow UI
-
-👉 http://localhost:8080
-
-Username: airflow
-Password: airflow
-
-4️⃣ Trigger the DAG
-
-Open the Airflow UI and run:
-ecommerce_etl
-
 ##  Project Structure
 ├── dags/
 
@@ -91,11 +70,17 @@ ecommerce_etl
   ## 🛡️ Best Practices Implemented
 
 ✔ Environment variables for secrets (secret key, MinIO creds)
+
 ✔ No hard-coded passwords in code
+
 ✔ XCom used only for lightweight metadata
+
 ✔ Large data passed via files instead of XCom
+
 ✔ Modular project structure (dags / data / output)
+
 ✔ Proper volume mounting for reproducibility
+
 ✔ Idempotent DAG tasks (overwrite allowed)
 
 ## 🎯 Key Learning Outcomes
