@@ -5,8 +5,8 @@ from io import BytesIO
 # Connect to MinIO
 client = Minio(
     "localhost:9000",
-    access_key="minioadmin",
-    secret_key="minioadmin",
+    access_key="****",
+    secret_key="****",
     secure=False
 )
 
