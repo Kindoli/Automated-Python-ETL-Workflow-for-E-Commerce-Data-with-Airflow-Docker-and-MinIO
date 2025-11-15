@@ -26,7 +26,7 @@ Reads the raw CSV file (ecommerce_raw.csv) from /opt/airflow/data/.
 
 Applies cleaning and filtering using Pandas:
 
-Filters only transactions from United Kingdom
+Filters only transactions from France
 
 Aggregates unit prices by InvoiceNo
 
