@@ -73,6 +73,13 @@ ecommerce-bucket/processed/ecommerce_cleaned.csv
 
 - Docker & Docker Compose
   
+- PowerBI
+
+  ## PowerBI Dashboard
+
+  <img width="602" height="377" alt="Dashboard" src="https://github.com/user-attachments/assets/3f350c7e-37d2-4cea-aa61-40ce5a51ee55" />
+
+  
   ## 🛡️ Best Practices Implemented
 
 ✔ Environment variables for secrets (secret key, MinIO creds)
