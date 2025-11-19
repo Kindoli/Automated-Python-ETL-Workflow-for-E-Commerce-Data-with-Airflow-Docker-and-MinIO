@@ -1,5 +1,9 @@
 ## E-Commerce ETL Pipeline with Airflow, Python & MinIO
 
+<p align="center">
+  <img src="D:\10.Work\Data_Engineering_Projects_2025\Images/Banner.png" alt="E-Commerce ETL Pipeline with Airflow, Python & MinIO" style="width:100%; max-width:900px;">
+</p>
+
 This project demonstrates a beginner-friendly batch ETL pipeline built with Apache Airflow, Python, Docker, and MinIO (as an S3-compatible object store).
 The workflow extracts raw e-commerce transactions, performs cleaning and transformation with Pandas, and loads processed output into MinIO for analytics and reporting.
 
