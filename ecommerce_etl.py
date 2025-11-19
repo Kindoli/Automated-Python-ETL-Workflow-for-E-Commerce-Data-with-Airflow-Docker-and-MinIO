@@ -16,10 +16,14 @@ S3_KEY = "processed/ecommerce_cleaned.csv"
 RAW_FILE = "/opt/airflow/data/ecommerce_raw.csv"
 PROCESSED_FILE = "/opt/airflow/output/ecommerce_cleaned.csv"
 
+# Extracting the dataset
+
 def extract():
     df = pd.read_csv(RAW_FILE, encoding_errors='replace')
     print(f"Extracted {len(df)} rows from {RAW_FILE}")
     return df.to_dict(orient='records')
+
+# Transforming the dataset
 
 def transform(**context):
     records = context['ti'].xcom_pull(task_ids='extract')
@@ -29,6 +33,8 @@ def transform(**context):
     summary.to_csv(PROCESSED_FILE, index=False)
     print(f"Transformed data saved to {PROCESSED_FILE}")
     return PROCESSED_FILE
+
+# Loading the dataset inot MINIO
 
 def load(**context):
     s3 = boto3.client(
@@ -40,7 +46,7 @@ def load(**context):
         region_name='us-east-1'
     )
 
-    # Ensure bucket exists
+    # Ensuring bucket exists
     buckets = [b['Name'] for b in s3.list_buckets()['Buckets']]
     if MINIO_BUCKET not in buckets:
         s3.create_bucket(Bucket=MINIO_BUCKET)
